@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dosocket | Digital Design Agency</title>
+    <meta name="description" content="Dosocket - Premium Digital Design Agency" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dosocket: {
+                // Primary Scale (Deep Teal System)
+                900: '#041F1A',
+                800: '#072B24', // Dark Hero
+                700: '#0A3C31', // Main Background
+                600: '#0F4A3E', // Cards
+                500: '#135C4C',
+                400: '#1A6B59',
+                
+                // Aliases for backward compatibility
+                dark: '#041F1A',   
+                main: '#0A3C31',   
+                surface: '#0F4A3E', 
+                border: '#1E5A4D', 
+
+                // Secondary Accent (Aqua System)
+                accent: '#A4FEEB', // 500 - Main Accent
+                'accent-hover': '#7EF7DF', // 400
+                'accent-glow': '#C9FFF5', // 300
+                
+                // Text Colors
+                text: '#F2FFFC',    // Soft White
+                subtext: '#CDEBE4', // Gray 300 equivalent
+                muted: '#8FB7AD'    // Gray 400 equivalent
+              }
+            },
+            fontFamily: {
+              display: ['Space Grotesk', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 15s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0A3C31; /* 700 Main Background */
+        color: #F2FFFC;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #041F1A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1E5A4D;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #A4FEEB;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.574.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
