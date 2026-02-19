@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FancyButton from '../UI/FancyButton';
 import Button from '../UI/Button';
-import SplashCursor from '../UI/SplashCursor';
 
 const Hero: React.FC = () => {
   const words = ["Global Brands", "Innovators", "Visionaries", "Market Leaders"];
@@ -49,11 +48,6 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-dosocket-900">
       
-      {/* Background with Fluid Splash Effect - Confined to Hero */}
-      <div className="absolute inset-0 w-full h-full">
-         <SplashCursor />
-      </div>
-      
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dosocket-900/80 z-10 pointer-events-none"></div>
 
@@ -71,7 +65,7 @@ const Hero: React.FC = () => {
           </div>
           
           {/* Main Heading */}
-          <h1 className="font-display font-medium text-6xl md:text-8xl lg:text-[140px] leading-[0.9] text-white mb-8 tracking-tight">
+          <h1 className="font-display font-medium text-5xl sm:text-6xl md:text-8xl lg:text-[140px] leading-[0.9] text-white mb-8 tracking-tight">
             Design Agency
           </h1>
           
@@ -80,7 +74,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center md:items-center gap-x-6 gap-y-2">
               
               {/* Trusted by Text - White, No Line */}
-              <h2 className="font-display font-normal text-3xl md:text-5xl text-white shrink-0 leading-none">
+              <h2 className="font-display font-normal text-2xl sm:text-3xl md:text-5xl text-white shrink-0 leading-none">
                 Trusted by
               </h2>
               

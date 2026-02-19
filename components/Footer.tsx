@@ -40,6 +40,7 @@ const Footer: React.FC = () => {
                 let scale = 1;
                 let opacity = 1;
                 let color = '#1F2937'; // gray-800 default
+                let textShadow = 'none';
 
                 if (hoveredIndex !== null) {
                   const dist = Math.abs(hoveredIndex - index);
@@ -49,16 +50,18 @@ const Footer: React.FC = () => {
                      scale = 1.1;
                      color = '#A4FEEB'; // accent
                      opacity = 1;
+                     textShadow = '0 0 20px rgba(164, 254, 235, 0.8), 0 0 40px rgba(164, 254, 235, 0.4)';
                   } else if (dist === 1) {
-                     blur = 2;
+                     blur = 4;
                      scale = 1.05;
-                     color = '#CDEBE4'; // subtext
-                     opacity = 0.8;
+                     color = '#A4FEEB'; // accent
+                     opacity = 0.6;
+                     textShadow = '0 0 10px rgba(164, 254, 235, 0.4)';
                   } else {
-                     blur = 6 + (dist * 2);
+                     blur = 10 + (dist * 4);
                      scale = 0.95;
                      color = '#1F2937';
-                     opacity = 0.3;
+                     opacity = 0.2;
                   }
                 } else {
                    // Default state (no hover)
@@ -75,7 +78,8 @@ const Footer: React.FC = () => {
                        color: color,
                        filter: `blur(${blur}px)`,
                        transform: `scale(${scale})`,
-                       opacity: opacity
+                       opacity: opacity,
+                       textShadow: textShadow
                     }}
                   >
                     {char}
@@ -88,16 +92,16 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 border-t border-white/10 pt-12">
            <div className="md:col-span-2">
               <div className="flex flex-col md:flex-row gap-8">
-                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-900 hover:text-dosocket-accent hover:border-dosocket-900 transition-all duration-300 hover:-translate-y-1 text-center">
+                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center">
                     info@Dosocket.com
                  </a>
-                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-900 hover:text-dosocket-accent hover:border-dosocket-900 transition-all duration-300 hover:-translate-y-1 text-center">
+                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center">
                     +8801756-028551
                  </a>
               </div>
               <div className="mt-8 text-dosocket-muted text-xs">
-                 <p className="mb-1"><span className="text-white/40">Main Office:</span> 1280 Dev GT Street</p>
-                 <p><span className="text-white/40">Second Office:</span> Rampura Bansri</p>
+                 <p className="mb-1"><span className="text-white/40">Location:</span> Remote / Global</p>
+                 <p><span className="text-white/40">Availability:</span> 24/7 Support</p>
               </div>
            </div>
 
@@ -117,8 +121,8 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-20 pt-8 border-t border-white/5">
            <div className="flex gap-8 text-xs text-white/40 mb-4 md:mb-0">
-              <a href="#">Privacy Policy</a>
-              <span>2023, Dosocket</span>
+              <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <span>2026, Dosocket</span>
            </div>
            <div className="flex gap-4">
               <SocialIcons />

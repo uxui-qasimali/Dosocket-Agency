@@ -59,9 +59,9 @@ const Services: React.FC = () => {
           
           {/* Left Sticky Header */}
           <div className="md:col-span-4 lg:col-span-3">
-             <div className="sticky top-32">
+             <div className="md:sticky md:top-32">
                 <SectionLabel text="How we create impact" />
-                <h2 className="font-display font-bold text-6xl text-dosocket-900 mb-6 tracking-tight">Services</h2>
+                <h2 className="font-display font-bold text-4xl md:text-6xl text-dosocket-900 mb-6 tracking-tight">Services</h2>
                 <p className="text-dosocket-500 text-base leading-relaxed max-w-xs">
                    Creative, Scalable Digital Solutions for modern brands.
                 </p>

@@ -15,10 +15,13 @@ import Contact from './components/Sections/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/UI/BackToTop';
 import ProjectDetail from './components/ProjectDetail';
+import CustomCursor from './components/UI/CustomCursor';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const HomePage: React.FC = () => {
   return (
     <>
+      <CustomCursor />
       <Navbar />
       <main className="relative z-10">
         <Hero />
@@ -46,6 +49,14 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/project/:id" element={<ProjectDetail />} />
+          <Route path="/privacy-policy" element={
+             <>
+                <CustomCursor />
+                <Navbar />
+                <PrivacyPolicy />
+                <Footer />
+             </>
+          } />
         </Routes>
       </div>
     </Router>

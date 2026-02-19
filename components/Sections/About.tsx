@@ -47,20 +47,16 @@ const About: React.FC = () => {
                   
                   <div className="space-y-6 text-gray-600 text-lg leading-relaxed max-w-xl">
                      <p>
-                        As an award-winning agency, Dosocket goes beyond design to turn your vision into lasting impact and legacy.
+                        Dosocket is a new agency founded in 2026, driven by a passion to turn your vision into lasting impact and legacy.
                      </p>
                      <p>
-                        We believe in the power of deep immersion. We don't just skim the surface; we dive into the core of your industry to extract insights that drive meaningful innovation.
+                        We believe in the power of deep immersion. We don't just skim the surface; we dive into the core of your industry to extract insights that drive meaningful innovation. Our goal is to earn your trust through exceptional work.
                      </p>
                   </div>
 
                   <div className="mt-12 flex gap-8">
                      <div>
-                        <span className="block text-4xl font-bold text-dosocket-700">50+</span>
-                        <span className="text-sm text-gray-500 uppercase tracking-wider">Awards</span>
-                     </div>
-                     <div>
-                        <span className="block text-4xl font-bold text-dosocket-700">200+</span>
+                        <span className="block text-4xl font-bold text-dosocket-700">0</span>
                         <span className="text-sm text-gray-500 uppercase tracking-wider">Clients</span>
                      </div>
                   </div>

@@ -70,8 +70,8 @@ const Projects: React.FC = () => {
            
            <div className="md:col-span-6 text-center">
               <p className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-4 font-bold">Crafted with Vision, Delivered as</p>
-              <h2 className="font-display font-bold text-6xl md:text-8xl text-dosocket-900 tracking-tight">Project</h2>
-              <p className="mt-8 text-gray-600 text-lg max-w-md mx-auto leading-relaxed">
+              <h2 className="font-display font-bold text-5xl md:text-8xl text-dosocket-900 tracking-tight">Project</h2>
+              <p className="mt-8 text-gray-600 text-base md:text-lg max-w-md mx-auto leading-relaxed">
                  Our work reflects a perfect balance of bold creativity & technical precision. We don't just make things look great— we make them work beautifully.
               </p>
            </div>
@@ -149,8 +149,8 @@ const Projects: React.FC = () => {
                  <div className="mb-6">
                     <span className="px-4 py-2 rounded-full bg-dosocket-accent text-dosocket-900 text-xs font-bold uppercase tracking-widest">Featured Case Study</span>
                  </div>
-                 <h3 className="text-5xl md:text-8xl font-display font-bold text-white mb-6 leading-[1.1] tracking-tight">Emirates Beta (Fly Better)</h3>
-                 <p className="text-gray-300 text-xl mb-10 max-w-xl leading-relaxed">
+                 <h3 className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white mb-6 leading-[1.1] tracking-tight">Emirates Beta (Fly Better)</h3>
+                 <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-xl leading-relaxed">
                    Your ultimate travel companion — book flights, manage trips, and enjoy seamless ticketing experience.
                  </p>
                  

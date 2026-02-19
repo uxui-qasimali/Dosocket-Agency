@@ -37,6 +37,9 @@ const SocialIcons: React.FC = () => {
         .card svg {
           transform: scale(1);
         }
+        .card .social-link2 svg {
+           transform: scale(0.8);
+        }
         .card .social-link1:hover {
           background: #f09433;
           background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -50,8 +53,12 @@ const SocialIcons: React.FC = () => {
           animation: bounce_613 0.4s linear;
         }
         .card .social-link3:hover {
-          background-color: #000000; /* X Black */
+          background-color: #ffffff; /* Twitter White */
+          color: #000000;
           animation: bounce_613 0.4s linear;
+        }
+        .card .social-link3:hover svg {
+           fill: #000000;
         }
         .card .social-link4:hover {
           background-color: #0a66c2; /* LinkedIn Blue */

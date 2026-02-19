@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SectionLabel from '../UI/SectionLabel';
-import { Github, Linkedin, Twitter, Globe, X } from 'lucide-react';
+import { Github, Linkedin, Twitter, Globe, X, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface TeamMember {
@@ -14,10 +14,8 @@ interface TeamMember {
   bio: string;
   socials: {
     linkedin?: string;
-    github?: string;
-    twitter?: string;
+    instagram?: string;
     portfolio?: string;
-    globe?: string;
   };
 }
 
@@ -28,12 +26,12 @@ const teamMembers: TeamMember[] = [
     role: 'Co-Founder & UI/UX Designer',
     country: 'Pakistan',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop',
-    experience: '5+ Years Exp.',
+    experience: '2 Years Exp.',
     specialty: 'Product Design',
     bio: 'Qasim is a visionary designer with a passion for creating intuitive and beautiful user experiences. He has led design teams for multiple successful startups.',
     socials: {
       linkedin: '#',
-      twitter: '#',
+      instagram: '#',
       portfolio: '#'
     }
   },
@@ -43,12 +41,11 @@ const teamMembers: TeamMember[] = [
     role: 'Co-Founder & Sr. Web Dev',
     country: 'Pakistan',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop',
-    experience: '6+ Years Exp.',
+    experience: '2 Years Exp.',
     specialty: 'Full Stack Dev',
     bio: 'Abdul Rehman is a technical wizard who specializes in building scalable web applications. His expertise spans across the entire stack, from server management to frontend optimization.',
     socials: {
       linkedin: '#',
-      github: '#',
       portfolio: '#'
     }
   },
@@ -58,12 +55,11 @@ const teamMembers: TeamMember[] = [
     role: 'Sr. Lead Gen & HR Manager',
     country: 'Pakistan',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop',
-    experience: '4+ Years Exp.',
+    experience: '2 Years Exp.',
     specialty: 'Talent Acquisition',
     bio: 'Abdul Basit excels in identifying top talent and driving growth through strategic lead generation. He ensures the team is always staffed with the best minds.',
     socials: {
-      linkedin: '#',
-      twitter: '#'
+      linkedin: '#'
     }
   },
   {
@@ -72,12 +68,11 @@ const teamMembers: TeamMember[] = [
     role: 'Sr. Digital Marketing',
     country: 'Bangladesh',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1000&auto=format&fit=crop',
-    experience: '5+ Years Exp.',
+    experience: '2 Years Exp.',
     specialty: 'SEO & Campaigns',
     bio: 'Ahosun is a digital marketing strategist who knows how to amplify brand presence. His data-driven approach ensures maximum ROI for marketing campaigns.',
     socials: {
-      linkedin: '#',
-      globe: '#'
+      linkedin: '#'
     }
   }
 ];
@@ -90,13 +85,13 @@ const Team: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mb-20 text-center max-w-3xl mx-auto">
            <div className="flex justify-center mb-6">
-             <SectionLabel text="Our Team" />
+             <SectionLabel text="Our Team" light />
            </div>
            <h2 className="font-display font-bold text-5xl md:text-6xl text-dosocket-900 tracking-tight mb-6">
-              Meet the <span className="text-dosocket-accent bg-dosocket-900 px-4 py-1 rounded-xl transform -rotate-2 inline-block">Minds</span>
+              <span className="text-dosocket-accent">Meet the</span> <span className="text-white bg-dosocket-900 px-4 py-1 rounded-xl transform -rotate-2 inline-block">Minds</span>
            </h2>
-           <p className="text-gray-600 text-lg">
-              A collective of visionaries, creators, and strategists dedicated to redefining the digital landscape. AA
+           <p className="text-white text-lg">
+              A collective of visionaries, creators, and strategists dedicated to redefining the digital landscape.
            </p>
         </div>
 
@@ -129,15 +124,21 @@ const Team: React.FC = () => {
                      </div>
                      <div className="team-card-bottom">
                         <div className="social-buttons-container">
-                           <button className="social-button">
-                              <Linkedin size={14} className="text-dosocket-900" />
-                           </button>
-                           <button className="social-button">
-                              <Twitter size={14} className="text-dosocket-900" />
-                           </button>
-                           <button className="social-button">
-                              <Globe size={14} className="text-dosocket-900" />
-                           </button>
+                           {member.socials.linkedin && (
+                               <a href={member.socials.linkedin} className="social-button">
+                                  <Linkedin size={14} />
+                               </a>
+                           )}
+                           {member.socials.instagram && (
+                               <a href={member.socials.instagram} className="social-button">
+                                  <Instagram size={14} />
+                               </a>
+                           )}
+                           {member.socials.portfolio && (
+                               <a href={member.socials.portfolio} className="social-button">
+                                  <Globe size={14} />
+                               </a>
+                           )}
                         </div>
                         <div className="view-more" onClick={() => setSelectedMember(member)}>
                            <button className="view-more-button">About Me</button>
@@ -181,7 +182,7 @@ const Team: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-2xl text-dosocket-900">{selectedMember.name}</h3>
-                  <p className="text-dosocket-accent font-medium text-sm uppercase tracking-wider">{selectedMember.role}</p>
+                  <p className="text-dosocket-900/70 font-medium text-sm uppercase tracking-wider">{selectedMember.role}</p>
                 </div>
               </div>
               
@@ -206,13 +207,13 @@ const Team: React.FC = () => {
                  </a>
                  <div className="flex gap-2">
                     {selectedMember.socials.linkedin && (
-                       <a href={selectedMember.socials.linkedin} className="w-12 h-12 flex items-center justify-center rounded-xl border border-gray-200 hover:border-dosocket-900 hover:text-dosocket-900 transition-colors">
+                       <a href={selectedMember.socials.linkedin} className="w-12 h-12 flex items-center justify-center rounded-xl border border-dosocket-900 text-dosocket-900 hover:bg-dosocket-900 hover:text-dosocket-accent transition-colors">
                           <Linkedin size={20} />
                        </a>
                     )}
-                    {selectedMember.socials.twitter && (
-                       <a href={selectedMember.socials.twitter} className="w-12 h-12 flex items-center justify-center rounded-xl border border-gray-200 hover:border-dosocket-900 hover:text-dosocket-900 transition-colors">
-                          <Twitter size={20} />
+                    {selectedMember.socials.instagram && (
+                       <a href={selectedMember.socials.instagram} className="w-12 h-12 flex items-center justify-center rounded-xl border border-dosocket-900 text-dosocket-900 hover:bg-dosocket-900 hover:text-dosocket-accent transition-colors">
+                          <Instagram size={20} />
                        </a>
                     )}
                  </div>
@@ -271,7 +272,7 @@ const Team: React.FC = () => {
 
         .team-card-text {
           display: block;
-          color: rgba(4, 31, 26, 0.7);
+          color: rgba(4, 31, 26, 0.6); /* Lighter primary */
           font-size: 14px;
           margin-top: 8px;
           font-weight: 500;
@@ -329,35 +330,38 @@ const Team: React.FC = () => {
           width: 30px;
           aspect-ratio: 1;
           padding: 5px;
-          background: rgb(255, 255, 255);
+          background: transparent;
           border-radius: 50%;
-          border: none;
+          border: 1px solid #041F1A;
           display: grid;
           place-content: center;
           box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
           cursor: pointer;
+          color: #041F1A;
+          transition: all 0.3s ease;
         }
 
         .social-button:first-child {
-          transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+          transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s, background 0.3s, color 0.3s;
         }
 
         .social-button:nth-child(2) {
-          transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+          transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s, background 0.3s, color 0.3s;
         }
 
         .social-button:nth-child(3) {
-          transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+          transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s, background 0.3s, color 0.3s;
         }
 
         .social-button:hover {
           background: #041F1A;
-          color: white;
+          color: #A4FEEB; /* Light secondary */
+          border-color: #041F1A;
         }
         
         .social-button:hover svg {
-           color: white;
-           stroke: white;
+           color: #A4FEEB;
+           stroke: #A4FEEB;
         }
 
         .team-card-logo {

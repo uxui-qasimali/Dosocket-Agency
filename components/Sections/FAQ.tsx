@@ -35,15 +35,15 @@ const FAQ: React.FC = () => {
                  <p className="text-gray-500 text-lg mb-8">
                     Everything you need to know about our process, pricing, and deliverables. Can't find what you're looking for?
                  </p>
-                 <div className="bg-dosocket-surface p-8 rounded-3xl border border-dosocket-border/50">
+                 <div className="bg-dosocket-900 p-8 rounded-3xl border border-dosocket-border/20 shadow-xl">
                     <div className="w-12 h-12 rounded-full bg-dosocket-accent flex items-center justify-center mb-4 text-dosocket-900">
                        <MessageCircle size={24} />
                     </div>
-                    <h4 className="font-bold text-dosocket-900 text-xl mb-2">Still have questions? AA</h4>
-                    <p className="text-sm text-gray-600 mb-6">Our team is ready to provide the answers you need.</p>
+                    <h4 className="font-bold text-white text-xl mb-2">Still have questions?</h4>
+                    <p className="text-sm text-gray-300 mb-6">Our team is ready to provide the answers you need.</p>
                     <button 
                        onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}
-                       className="bg-dosocket-900 text-white px-8 py-3 rounded-[0.8em] text-sm font-bold uppercase tracking-widest hover:bg-dosocket-700 transition-colors w-full"
+                       className="bg-white text-dosocket-900 px-8 py-3 rounded-[0.8em] text-sm font-bold uppercase tracking-widest hover:bg-dosocket-accent transition-colors w-full"
                     >
                        Contact Support
                     </button>

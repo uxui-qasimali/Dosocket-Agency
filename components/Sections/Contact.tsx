@@ -60,9 +60,9 @@ const Contact: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-12">
           
            <div className="md:col-span-4 lg:col-span-3">
-              <div className="sticky top-32">
+              <div className="md:sticky md:top-32 mb-8 md:mb-0">
                  <SectionLabel text="Get in Touch" />
-                 <h2 className="font-display font-bold text-6xl text-dosocket-900 mb-6 tracking-tight">Contact</h2>
+                 <h2 className="font-display font-bold text-4xl md:text-6xl text-dosocket-900 mb-6 tracking-tight">Contact</h2>
                  <p className="text-dosocket-500 text-base leading-relaxed max-w-xs">
                     Ready to start your next project? We are here to help.
                  </p>
