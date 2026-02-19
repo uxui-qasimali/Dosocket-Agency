@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
 
         {/* View All Button */}
         <div className="flex justify-center mb-24">
-           <Button variant="outline" className="px-12 py-4 text-sm uppercase tracking-[0.2em] font-bold">
+           <Button variant="primary" className="px-12 py-4 text-sm uppercase tracking-[0.2em] font-bold">
               View All Projects
            </Button>
         </div>

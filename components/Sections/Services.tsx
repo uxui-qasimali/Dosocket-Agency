@@ -15,30 +15,23 @@ const servicesData: ServiceItem[] = [
   {
     id: '02',
     number: '002',
-    title: 'Web-flow Design',
+    title: 'Web Application',
     description: 'Scalable, high-performance web applications built for growth. We specialize in creating complex dashboards and enterprise solutions.',
     tags: ['SaaS Design', 'React/Next.js', 'Dashboard Architecture']
   },
   {
     id: '03',
     number: '003',
-    title: 'Framer Development',
+    title: 'Web Development',
     description: 'Robust front-end and back-end development. We write clean, semantic code optimized for speed and SEO.',
     tags: ['Full Stack', 'CMS Integration', 'API Development']
   },
   {
     id: '04',
     number: '004',
-    title: 'Product Design',
+    title: 'Digital Marketing',
     description: 'Data-driven strategies to amplify your brand presence. We help you reach your target audience through targeted campaigns.',
     tags: ['SEO & SEM', 'Social Media', 'Content Strategy']
-  },
-  {
-    id: '05',
-    number: '005',
-    title: 'Design Development',
-    description: 'Bridging the gap between design and code. We ensure every pixel is perfectly translated into a functional product.',
-    tags: ['Design Systems', 'Handoff', 'Technical Design']
   }
 ];
 

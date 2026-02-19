@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Instagram, Linkedin, Twitter, Dribbble } from 'lucide-react';
+import SocialIcons from './UI/SocialIcons';
 
 const Footer: React.FC = () => {
   const brandName = "Dosocket";
@@ -88,10 +88,10 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 border-t border-white/10 pt-12">
            <div className="md:col-span-2">
               <div className="flex flex-col md:flex-row gap-8">
-                 <a href="#" className="px-8 py-3 rounded-full border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
+                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
                     info@Dosocket.com
                  </a>
-                 <a href="#" className="px-8 py-3 rounded-full border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
+                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
                     +8801756-028551
                  </a>
               </div>
@@ -103,18 +103,15 @@ const Footer: React.FC = () => {
 
            <div>
               <ul className="space-y-4 text-sm text-dosocket-muted">
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Services</a></li>
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Project</a></li>
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Company</a></li>
+                 <li><button onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">Services</button></li>
+                 <li><button onClick={() => document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">Project</button></li>
+                 <li><button onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">About</button></li>
+                 <li><button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">Contact</button></li>
               </ul>
            </div>
 
            <div>
-              <ul className="space-y-4 text-sm text-dosocket-muted">
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Blog</a></li>
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Workflow</a></li>
-                 <li><a href="#" className="hover:text-dosocket-accent transition-colors">Contacts</a></li>
-              </ul>
+              {/* Removed Blog and Workflow as requested */}
            </div>
         </div>
 
@@ -124,11 +121,7 @@ const Footer: React.FC = () => {
               <span>2023, Dosocket</span>
            </div>
            <div className="flex gap-4">
-              {[Instagram, Linkedin, Twitter, Dribbble].map((Icon, idx) => (
-                 <a key={idx} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-dosocket-accent hover:border-dosocket-accent transition-colors">
-                    <Icon size={16} />
-                 </a>
-              ))}
+              <SocialIcons />
            </div>
         </div>
       </div>

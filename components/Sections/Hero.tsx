@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
         >
           {/* Top UX Tag */}
           <div className="mb-6">
-             <span className="text-dosocket-muted uppercase tracking-widest text-sm font-medium">Top UX</span>
+             <span className="text-dosocket-muted uppercase tracking-widest text-sm font-medium">Premium Agency</span>
           </div>
           
           {/* Main Heading */}
@@ -135,10 +135,9 @@ const Hero: React.FC = () => {
            <ul className="space-y-4 text-sm text-dosocket-muted/60 font-medium tracking-[0.1em] uppercase">
               {[
                 "UI/UX Designing",
-                "Web-flow Design",
-                "Framer Development",
-                "Product Design",
-                "Design Development"
+                "Web Application",
+                "Web Development",
+                "Digital Marketing"
               ].map((service) => (
                 <li 
                   key={service}

@@ -5,8 +5,9 @@ interface AnimatedInputProps {
   type?: string;
   placeholder?: string; // Placeholder is generally hidden in this design until focus, or not used
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   name?: string;
+  multiline?: boolean;
 }
 
 const AnimatedInput: React.FC<AnimatedInputProps> = ({ 
@@ -14,7 +15,8 @@ const AnimatedInput: React.FC<AnimatedInputProps> = ({
   type = "text", 
   value, 
   onChange,
-  name 
+  name,
+  multiline = false
 }) => {
   return (
     <div className="relative w-full my-4">
@@ -25,7 +27,7 @@ const AnimatedInput: React.FC<AnimatedInputProps> = ({
           width: 100%;
         }
 
-        .form-control input {
+        .form-control input, .form-control textarea {
           background-color: transparent;
           border: 0;
           border-bottom: 2px #041F1A solid; /* Dark color for white bg */
@@ -36,10 +38,13 @@ const AnimatedInput: React.FC<AnimatedInputProps> = ({
           color: #041F1A; /* Dark text */
           font-family: 'Space Grotesk', sans-serif;
           font-weight: 500;
+          resize: none;
         }
 
         .form-control input:focus,
-        .form-control input:valid {
+        .form-control input:valid,
+        .form-control textarea:focus,
+        .form-control textarea:valid {
           outline: 0;
           border-bottom-color: #0A3C31; /* Slightly lighter teal on focus */
         }
@@ -61,7 +66,9 @@ const AnimatedInput: React.FC<AnimatedInputProps> = ({
         }
 
         .form-control input:focus + label span,
-        .form-control input:valid + label span {
+        .form-control input:valid + label span,
+        .form-control textarea:focus + label span,
+        .form-control textarea:valid + label span {
           color: #0A3C31;
           transform: translateY(-30px);
           font-weight: 600;
@@ -70,14 +77,25 @@ const AnimatedInput: React.FC<AnimatedInputProps> = ({
       `}</style>
 
       <div className="form-control">
-        <input 
-          type={type} 
-          name={name}
-          value={value} 
-          onChange={onChange} 
-          required 
-          autoComplete="off"
-        />
+        {multiline ? (
+          <textarea
+            name={name}
+            value={value}
+            onChange={onChange}
+            required
+            rows={1}
+            style={{ minHeight: '50px' }}
+          />
+        ) : (
+          <input 
+            type={type} 
+            name={name}
+            value={value} 
+            onChange={onChange} 
+            required 
+            autoComplete="off"
+          />
+        )}
         <label>
           {label.split('').map((char, index) => (
             <span 

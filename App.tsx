@@ -9,6 +9,7 @@ import MockupSlider from './components/Sections/MockupSlider';
 import Projects from './components/Sections/Projects';
 import Testimonials from './components/Sections/Testimonials';
 import Achievements from './components/Sections/Achievements';
+import Team from './components/Sections/Team';
 import FAQ from './components/Sections/FAQ';
 import Contact from './components/Sections/Contact';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ const HomePage: React.FC = () => {
         <Projects />
         <Testimonials />
         <Achievements />
+        <Team />
         <FAQ />
         <Contact />
       </main>

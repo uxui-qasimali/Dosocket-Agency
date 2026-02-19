@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-12 items-center">
            <div className="md:col-span-5 relative">
               <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100">
-                 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="About Visual" />
+                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" alt="About Visual" />
                  
                  {/* Floating Badge */}
                  <div className="absolute bottom-8 right-8 w-24 h-24 bg-white rounded-full flex items-center justify-center animate-[spin_12s_linear_infinite]">
@@ -40,7 +40,7 @@ const About: React.FC = () => {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
               >
-                  <h3 className="text-dosocket-900 text-4xl md:text-6xl font-display font-medium leading-[1.1] mb-10 tracking-tight">
+                  <h3 className="text-dosocket-900 text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-10 tracking-tight">
                      We help businesses with exceptional solutions—building memorable websites and digital products.
                   </h3>
                   

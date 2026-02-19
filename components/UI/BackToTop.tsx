@@ -73,7 +73,7 @@ const BackToTop = () => {
             height: 2px;
             bottom: 12px;
             left: 20%;
-            width: 60%;
+            width: 45%; /* Reduced width to cover text only */
             transform: scaleX(0);
             transform-origin: bottom right;
             background: #041F1A;

@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
                  <p className="text-gray-500">Let's build something extraordinary together.</p>
               </div>
 
-              <form className="space-y-12">
+              <form className="space-y-6">
                  {/* 01. Name */}
                  <div className="flex gap-4 items-start">
                     <span className="text-dosocket-accent font-mono text-lg mt-4">01</span>
@@ -93,17 +93,25 @@ const Contact: React.FC = () => {
                     <span className="text-dosocket-accent font-mono text-lg mt-2">05</span>
                     <div className="w-full">
                         <label className="block text-lg font-bold text-dosocket-900 mb-6">What services are you looking for?</label>
-                        <div className="flex flex-wrap gap-3">
-                           {services.map(service => (
-                              <button 
-                                key={service}
-                                type="button"
-                                onClick={() => toggleService(service)}
-                                className={`px-6 py-3 rounded-none border-2 font-medium transition-all duration-300 ${selectedServices.includes(service) ? 'bg-dosocket-900 text-white border-dosocket-900 shadow-[4px_4px_0px_0px_rgba(164,254,235,1)]' : 'bg-transparent text-dosocket-900 border-gray-300 hover:border-dosocket-900'}`}
-                              >
-                                 {service}
-                              </button>
-                           ))}
+                        <div className="relative">
+                           <select 
+                              className="w-full bg-transparent border-b-2 border-gray-200 focus:border-dosocket-900 outline-none py-4 text-dosocket-900 transition-colors appearance-none cursor-pointer"
+                              onChange={(e) => toggleService(e.target.value)}
+                              value=""
+                           >
+                              <option value="" disabled>Select a service</option>
+                              {services.map(service => (
+                                 <option key={service} value={service}>{service}</option>
+                              ))}
+                           </select>
+                           <div className="mt-4 flex flex-wrap gap-2">
+                              {selectedServices.map(service => (
+                                 <span key={service} className="px-4 py-2 bg-dosocket-900 text-white rounded-[0.8em] text-sm flex items-center gap-2">
+                                    {service}
+                                    <button type="button" onClick={() => toggleService(service)} className="hover:text-dosocket-accent">×</button>
+                                 </span>
+                              ))}
+                           </div>
                         </div>
                     </div>
                  </div>
@@ -113,17 +121,17 @@ const Contact: React.FC = () => {
                     <span className="text-dosocket-accent font-mono text-lg mt-2">06</span>
                     <div className="w-full">
                         <label className="block text-lg font-bold text-dosocket-900 mb-6">What have you budgeted for this project?</label>
-                        <div className="flex flex-wrap gap-3">
-                           {budgets.map(budget => (
-                              <button 
-                                key={budget}
-                                type="button"
-                                onClick={() => setSelectedBudget(budget)}
-                                className={`px-6 py-3 rounded-none border-2 font-medium transition-all duration-300 ${selectedBudget === budget ? 'bg-dosocket-900 text-white border-dosocket-900 shadow-[4px_4px_0px_0px_rgba(164,254,235,1)]' : 'bg-transparent text-dosocket-900 border-gray-300 hover:border-dosocket-900'}`}
-                              >
-                                 {budget}
-                              </button>
-                           ))}
+                        <div className="relative">
+                           <select 
+                              className="w-full bg-transparent border-b-2 border-gray-200 focus:border-dosocket-900 outline-none py-4 text-dosocket-900 transition-colors appearance-none cursor-pointer"
+                              onChange={(e) => setSelectedBudget(e.target.value)}
+                              value={selectedBudget}
+                           >
+                              <option value="" disabled>Select a budget range</option>
+                              {budgets.map(budget => (
+                                 <option key={budget} value={budget}>{budget}</option>
+                              ))}
+                           </select>
                         </div>
                     </div>
                  </div>
@@ -132,19 +140,18 @@ const Contact: React.FC = () => {
                  <div className="flex gap-4 items-start">
                     <span className="text-dosocket-accent font-mono text-lg mt-4">07</span>
                     <div className="w-full">
-                       <label className="block text-lg font-bold text-dosocket-900 mb-4">Tell us about your project</label>
-                       <div className="relative w-full">
-                          <textarea 
-                             rows={3}
-                             className="w-full bg-transparent border-b-2 border-gray-200 focus:border-dosocket-900 outline-none py-4 text-dosocket-900 transition-colors resize-none placeholder-gray-300"
-                             placeholder="Please describe your project..."
-                          ></textarea>
-                       </div>
+                       <AnimatedInput 
+                          name="details"
+                          label="Tell us about your project" 
+                          value={formData.details}
+                          onChange={handleInputChange}
+                          multiline
+                       />
                     </div>
                  </div>
 
                  <div className="flex flex-col md:flex-row items-center gap-6 justify-end pt-8">
-                    <button type="submit" className="bg-dosocket-900 text-white px-12 py-4 rounded-full font-bold hover:bg-dosocket-700 transition-all w-full md:w-auto transform active:scale-95 shadow-xl flex items-center gap-2 justify-center group">
+                    <button type="submit" className="bg-dosocket-900 text-white px-12 py-4 rounded-[0.8em] font-bold hover:bg-dosocket-700 transition-all w-full md:w-auto transform active:scale-95 shadow-xl flex items-center gap-2 justify-center group">
                        Send Proposal
                        <span className="w-2 h-2 rounded-full bg-dosocket-accent group-hover:scale-150 transition-transform"></span>
                     </button>
