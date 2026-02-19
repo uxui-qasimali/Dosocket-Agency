@@ -6,15 +6,15 @@ const SocialIcons: React.FC = () => {
       <style>{`
         .card {
           display: flex;
-          height: 70px;
-          width: 350px;
+          height: 38px;
+          width: 200px;
         }
         .card svg {
           position: absolute;
           display: flex;
           width: 60%;
           height: 100%;
-          font-size: 24px;
+          font-size: 18px;
           font-weight: 700;
           opacity: 1;
           transition: opacity 0.25s;
@@ -29,7 +29,7 @@ const SocialIcons: React.FC = () => {
           justify-content: center;
           width: 25%;
           color: whitesmoke;
-          font-size: 24px;
+          font-size: 18px;
           text-decoration: none;
           transition: 0.25s;
           border-radius: 50px;

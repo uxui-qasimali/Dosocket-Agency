@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FancyButton from '../UI/FancyButton';
+import Button from '../UI/Button';
 import SplashCursor from '../UI/SplashCursor';
 
 const Hero: React.FC = () => {
@@ -119,9 +120,9 @@ const Hero: React.FC = () => {
                Let's Talk
             </FancyButton>
             
-            <FancyButton variant="secondary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="accent-outline" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                Featured Work
-            </FancyButton>
+            </Button>
           </div>
         </motion.div>
         

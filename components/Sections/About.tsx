@@ -10,7 +10,8 @@ const About: React.FC = () => {
         {/* Top Label Row */}
         <div className="grid md:grid-cols-12 gap-12 mb-12">
            <div className="md:col-span-4 lg:col-span-3">
-              <SectionLabel text="About Us" />
+              <SectionLabel text="Who We Are" />
+              <h2 className="font-display font-bold text-6xl text-dosocket-900 mb-6 tracking-tight">About Us</h2>
            </div>
         </div>
 

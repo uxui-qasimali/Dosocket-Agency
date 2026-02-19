@@ -88,10 +88,10 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12 border-t border-white/10 pt-12">
            <div className="md:col-span-2">
               <div className="flex flex-col md:flex-row gap-8">
-                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
+                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-900 hover:text-dosocket-accent hover:border-dosocket-900 transition-all duration-300 hover:-translate-y-1 text-center">
                     info@Dosocket.com
                  </a>
-                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-white/20 text-sm hover:bg-white hover:text-black transition-colors text-center">
+                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-900 hover:text-dosocket-accent hover:border-dosocket-900 transition-all duration-300 hover:-translate-y-1 text-center">
                     +8801756-028551
                  </a>
               </div>

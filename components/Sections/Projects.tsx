@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { ProjectItem } from '../../types';
 import { motion } from 'framer-motion';
 import SectionLabel from '../UI/SectionLabel';
+import FancyButton from '../UI/FancyButton';
 import Button from '../UI/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -129,7 +130,7 @@ const Projects: React.FC = () => {
 
         {/* View All Button */}
         <div className="flex justify-center mb-24">
-           <Button variant="primary" className="px-12 py-4 text-sm uppercase tracking-[0.2em] font-bold">
+           <Button variant="dark-outline" onClick={() => navigate('/projects')}>
               View All Projects
            </Button>
         </div>

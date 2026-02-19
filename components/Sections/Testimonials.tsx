@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Quote, ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
+import { Quote, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionLabel from '../UI/SectionLabel';
+import FancyButton from '../UI/FancyButton';
+import Button from '../UI/Button';
 
 const testimonialsData = [
 // ... existing data ...
@@ -153,12 +155,9 @@ const Testimonials: React.FC = () => {
 
         {/* Navigation Buttons Below Testimonials */}
         <div className="flex justify-end lg:justify-start gap-6 mt-12">
-             <button 
-                onClick={prevTestimonial}
-                className="w-16 h-16 rounded-[0.8em] border-2 border-dosocket-accent flex items-center justify-center bg-dosocket-accent text-dosocket-900 hover:bg-dosocket-surface hover:text-dosocket-text hover:border-dosocket-border/50 transition-all duration-500 group shadow-lg"
-             >
-                <ChevronLeft size={28} className="group-hover:-translate-x-1 transition-transform" />
-             </button>
+             <Button variant="dark-outline" onClick={prevTestimonial}>
+                Prev
+             </Button>
              
              <button 
                 onClick={nextTestimonial}
