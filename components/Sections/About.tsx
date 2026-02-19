@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SectionLabel from '../UI/SectionLabel';
 
 const About: React.FC = () => {
   return (
@@ -7,12 +8,9 @@ const About: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12">
         
         {/* Top Label Row */}
-        <div className="grid md:grid-cols-12 gap-12 mb-20">
+        <div className="grid md:grid-cols-12 gap-12 mb-12">
            <div className="md:col-span-4 lg:col-span-3">
-              <div className="flex items-center gap-4">
-                 <span className="text-dosocket-900 text-xs font-bold uppercase tracking-widest">About</span>
-                 <span className="h-[1px] w-16 bg-dosocket-border"></span>
-              </div>
+              <SectionLabel text="About Us" />
            </div>
         </div>
 
@@ -42,7 +40,7 @@ const About: React.FC = () => {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
               >
-                  <h3 className="text-dosocket-900 text-3xl md:text-5xl font-display font-medium leading-tight mb-8">
+                  <h3 className="text-dosocket-900 text-4xl md:text-6xl font-display font-medium leading-[1.1] mb-10 tracking-tight">
                      We help businesses with exceptional solutions—building memorable websites and digital products.
                   </h3>
                   

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Quote, ChevronRight, ChevronLeft, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import SectionLabel from '../UI/SectionLabel';
 
 const testimonialsData = [
+// ... existing data ...
    {
       id: 1,
       name: "Crist Lily",
@@ -66,11 +68,8 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-end mb-12">
            <div>
-              <span className="text-dosocket-900 text-sm font-bold uppercase tracking-widest flex items-center gap-4 mb-4">
-                  <span className="w-12 h-[1px] bg-dosocket-border"></span>
-                  Voice of Trust
-              </span>
-              <h2 className="font-display font-bold text-4xl text-dosocket-900">Testimonial</h2>
+              <SectionLabel text="Voice of Trust" />
+              <h2 className="font-display font-bold text-5xl md:text-6xl text-dosocket-900 tracking-tight">Testimonial</h2>
            </div>
            
            {/* Original Top Button - Removed as requested to place below */}
@@ -153,23 +152,23 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Navigation Buttons Below Testimonials */}
-        <div className="flex justify-end lg:justify-start gap-4 mt-8">
+        <div className="flex justify-end lg:justify-start gap-6 mt-12">
              <button 
                 onClick={prevTestimonial}
-                className="w-14 h-14 rounded-full border border-dosocket-200 flex items-center justify-center hover:bg-dosocket-900 hover:text-white transition-all duration-300 group shadow-md"
+                className="w-16 h-16 rounded-full border-2 border-dosocket-accent flex items-center justify-center text-dosocket-accent hover:bg-dosocket-accent hover:text-dosocket-900 transition-all duration-500 group shadow-lg"
              >
-                <ChevronLeft size={24} className="group-hover:-translate-x-1 transition-transform" />
+                <ChevronLeft size={28} className="group-hover:-translate-x-1 transition-transform" />
              </button>
              
              <button 
                 onClick={nextTestimonial}
-                className="group relative px-8 h-14 rounded-full bg-dosocket-900 text-white flex items-center gap-3 overflow-hidden shadow-lg hover:shadow-xl transition-all"
+                className="group relative px-10 h-16 rounded-full bg-dosocket-900 text-white flex items-center gap-4 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
              >
-                <span className="relative z-10 font-bold tracking-wider">NEXT</span>
-                <span className="relative z-10 w-8 h-8 rounded-full bg-dosocket-accent text-dosocket-900 flex items-center justify-center group-hover:scale-110 transition-transform">
-                   <ArrowRight size={16} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                <span className="relative z-10 font-bold tracking-[0.2em] uppercase text-sm">NEXT</span>
+                <span className="relative z-10 w-10 h-10 rounded-2xl bg-dosocket-accent text-dosocket-900 flex items-center justify-center group-hover:scale-110 transition-all duration-500 rotate-12 group-hover:rotate-0">
+                   <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-500" />
                 </span>
-                <div className="absolute inset-0 bg-dosocket-700 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 bg-dosocket-700 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
              </button>
         </div>
       </div>

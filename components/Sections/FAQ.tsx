@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { FaqItem } from '../../types';
 
+import SectionLabel from '../UI/SectionLabel';
+
 const faqs: FaqItem[] = [
+// ... existing faqs ...
   { id: '1', question: 'What is your core UX & branding process?', answer: 'We start with deep discovery, move to strategic wireframing, then visual design, and finally rigorous testing. Our process is iterative and collaborative.' },
   { id: '2', question: 'Can you redesign our enterprise software?', answer: 'Absolutely. We specialize in transforming complex legacy systems into intuitive, modern interfaces that improve user efficiency.' },
   { id: '3', question: 'Which solution is best for me, Custom or CMS?', answer: 'It depends on your scalability needs. For marketing sites, Framer/Webflow is great. For web apps, custom React development is preferred.' },
@@ -17,9 +20,9 @@ const FAQ: React.FC = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-           <span className="text-gray-400 text-xs uppercase tracking-widest mb-2 block">Need clarity? Find it here</span>
-           <h2 className="font-display font-bold text-4xl md:text-5xl text-dosocket-900 mb-6">Frequently Asked <br/> Questions</h2>
+        <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
+           <SectionLabel text="Need clarity? Find it here" />
+           <h2 className="font-display font-bold text-5xl md:text-6xl text-dosocket-900 mb-8 tracking-tight">Frequently Asked Questions</h2>
            <div className="flex justify-center -space-x-4 mb-4">
               {[1,2,3,4].map(i => (
                  <img key={i} src={`https://picsum.photos/seed/face${i}/50/50`} className="w-10 h-10 rounded-full border-2 border-white" alt="Team" />

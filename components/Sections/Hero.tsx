@@ -115,11 +115,11 @@ const Hero: React.FC = () => {
           
           {/* Actions */}
           <div className="flex flex-col md:flex-row gap-6 items-center">
-            <FancyButton variant="primary">
+            <FancyButton variant="primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                Let's Talk
             </FancyButton>
             
-            <FancyButton variant="secondary">
+            <FancyButton variant="secondary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                Featured Work
             </FancyButton>
           </div>
@@ -132,12 +132,23 @@ const Hero: React.FC = () => {
            transition={{ delay: 0.5, duration: 0.8 }}
            className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block text-right pr-12"
         >
-           <ul className="space-y-3 text-sm text-dosocket-muted/60 font-light tracking-wide">
-              <li className="hover:text-dosocket-accent transition-colors cursor-pointer">• UI/UX Design</li>
-              <li className="hover:text-dosocket-accent transition-colors cursor-pointer">• Web-flow Design</li>
-              <li className="hover:text-dosocket-accent transition-colors cursor-pointer">• Framer Development</li>
-              <li className="hover:text-dosocket-accent transition-colors cursor-pointer">• Product Design</li>
-              <li className="hover:text-dosocket-accent transition-colors cursor-pointer">• Design Development</li>
+           <ul className="space-y-4 text-sm text-dosocket-muted/60 font-medium tracking-[0.1em] uppercase">
+              {[
+                "UI/UX Designing",
+                "Web-flow Design",
+                "Framer Development",
+                "Product Design",
+                "Design Development"
+              ].map((service) => (
+                <li 
+                  key={service}
+                  className="hover:text-dosocket-accent transition-all duration-300 cursor-pointer flex items-center justify-end gap-3 group"
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-service', { detail: { title: service } }))}
+                >
+                  <span className="group-hover:-translate-x-2 transition-transform duration-300">{service}</span>
+                  <div className="w-1.5 h-1.5 rounded-full bg-dosocket-accent/30 group-hover:bg-dosocket-accent transition-colors"></div>
+                </li>
+              ))}
            </ul>
         </motion.div>
       </div>

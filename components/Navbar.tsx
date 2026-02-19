@@ -74,15 +74,15 @@ const Navbar: React.FC = () => {
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-8 bg-dosocket-surface/30 px-8 py-3 rounded-full border border-dosocket-border/50 backdrop-blur-md hover:bg-dosocket-surface/50 transition-colors duration-300">
+          <div className="hidden md:flex items-center space-x-8 bg-dosocket-surface/30 px-8 py-3 rounded-full border border-dosocket-border/50 backdrop-blur-md hover:bg-dosocket-surface/50 transition-all duration-500 ease-in-out">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-sm font-medium text-dosocket-subtext hover:text-dosocket-accent transition-colors relative group overflow-hidden"
+                className="text-sm font-medium text-dosocket-subtext hover:text-dosocket-accent transition-all duration-300 relative group py-1"
               >
-                <span className="relative z-10">{link.name}</span>
-                <span className="absolute bottom-0 left-0 w-full h-[1px] bg-dosocket-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                <span className="relative z-10 group-hover:-translate-y-[2px] inline-block transition-transform duration-300 ease-out">{link.name}</span>
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-dosocket-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out"></span>
               </a>
             ))}
           </div>

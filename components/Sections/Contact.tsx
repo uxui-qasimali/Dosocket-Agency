@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import AnimatedInput from '../UI/AnimatedInput';
+import SectionLabel from '../UI/SectionLabel';
 
 const Contact: React.FC = () => {
+// ... existing state ...
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [selectedBudget, setSelectedBudget] = useState<string>('');
   const [formData, setFormData] = useState({
@@ -30,10 +32,7 @@ const Contact: React.FC = () => {
         <div className="grid md:grid-cols-12 gap-12">
           
            <div className="md:col-span-4 lg:col-span-3">
-              <span className="text-dosocket-900 text-sm font-bold uppercase tracking-widest flex items-center gap-4 mb-8">
-                  <span className="w-12 h-[1px] bg-dosocket-border"></span>
-                  Contact
-              </span>
+              <SectionLabel text="Contact" />
            </div>
 
            <div className="md:col-span-8 lg:col-span-9 bg-gray-50 border border-gray-100 rounded-3xl p-8 md:p-16 shadow-lg">

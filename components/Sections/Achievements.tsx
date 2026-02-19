@@ -1,7 +1,10 @@
 import React from 'react';
 import { StatItem } from '../../types';
 
+import SectionLabel from '../UI/SectionLabel';
+
 const stats: StatItem[] = [
+// ... existing stats ...
   { id: '1', label: 'Years of Service', value: '05', description: 'Consistently delivering quality.' },
   { id: '2', label: 'Awards Won', value: '08', description: 'Recognition for excellence.' },
   { id: '3', label: 'Creative Minds', value: '50+', description: 'A diverse team of experts.' },
@@ -20,8 +23,8 @@ const Achievements: React.FC = () => {
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
          <div className="mb-16 md:w-1/2">
-            <p className="text-dosocket-700 font-mono text-sm mb-4">Quietly we say,</p>
-            <h3 className="font-display text-4xl md:text-5xl text-dosocket-900">
+            <SectionLabel text="Our Impact" />
+            <h3 className="font-display text-5xl md:text-7xl text-dosocket-900 leading-[1.1] tracking-tight">
                Every design we create <span className="text-gray-400 italic">tells a story of success.</span>
             </h3>
          </div>
