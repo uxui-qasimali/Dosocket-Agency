@@ -52,9 +52,11 @@ const Hero: React.FC = () => {
       {/* Background with Fluid Liquid Ether Effect */}
       <div className="absolute inset-0 w-full h-full">
          <FloatingLines 
-            linesGradient={['#00FFFF', '#00FF7F', '#FFD700', '#FF4D6D', '#00FFFF']} 
+            linesGradient={['#00FFFF', '#E0FFFF', '#7FFFD4', '#00CED1', '#40E0D0']} 
             animationSpeed={0.5}
             interactive={true}
+            bendStrength={0.8}
+            bendRadius={3.0}
          />
       </div>
       
