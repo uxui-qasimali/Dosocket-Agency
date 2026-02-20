@@ -26,7 +26,7 @@ const BackToTop = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
+    <div className="fixed bottom-10 right-10 z-50">
         <style>{`
           .back-btn {
             width: 140px;

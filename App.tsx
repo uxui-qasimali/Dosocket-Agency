@@ -18,9 +18,12 @@ import ProjectDetail from './components/ProjectDetail';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import ServicesPage from './components/ServicesPage';
 
+import SplashCursor from './components/UI/SplashCursor';
+
 const HomePage: React.FC = () => {
   return (
     <>
+      <SplashCursor />
       <Navbar />
       <main className="relative z-10">
         <Hero />
