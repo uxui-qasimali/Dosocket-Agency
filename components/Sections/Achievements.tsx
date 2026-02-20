@@ -4,11 +4,10 @@ import { StatItem } from '../../types';
 import SectionLabel from '../UI/SectionLabel';
 
 const stats: StatItem[] = [
-// ... existing stats ...
-  { id: '1', label: 'Years of Service', value: '05', description: 'Consistently delivering quality.' },
-  { id: '2', label: 'Awards Won', value: '08', description: 'Recognition for excellence.' },
-  { id: '3', label: 'Creative Minds', value: '50+', description: 'A diverse team of experts.' },
-  { id: '4', label: 'Satisfied Clients', value: '200+', description: 'Building lasting partnerships.' },
+  { id: '1', label: 'Years of Service', value: '2.5', description: 'Consistently delivering quality.' },
+  { id: '2', label: 'Projects Done', value: '35+', description: 'Successful deliveries.' },
+  { id: '3', label: 'Creative Minds', value: '05', description: 'A diverse team of experts.' },
+  { id: '4', label: 'Satisfied Clients', value: '30+', description: 'Building lasting partnerships.' },
 ];
 
 const Achievements: React.FC = () => {

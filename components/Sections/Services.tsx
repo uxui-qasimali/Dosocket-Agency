@@ -4,34 +4,38 @@ import { ArrowUpRight } from 'lucide-react';
 import { ServiceItem } from '../../types';
 import SectionLabel from '../UI/SectionLabel';
 
-const servicesData: ServiceItem[] = [
+  const servicesData: ServiceItem[] = [
   {
     id: '01',
     number: '001',
     title: 'UI/UX Designing',
     description: 'We craft intuitive and engaging user experiences. From wireframes to high-fidelity prototypes, our design process ensures your product is not only beautiful but functional.',
-    tags: ['Design Audits', 'UX Research', 'Prototyping']
+    tags: ['Design Audits', 'UX Research', 'Prototyping'],
+    linkId: 'ui-ux'
   },
   {
     id: '02',
     number: '002',
     title: 'Web Application',
     description: 'Scalable, high-performance web applications built for growth. We specialize in creating complex dashboards and enterprise solutions.',
-    tags: ['SaaS Design', 'React/Next.js', 'Dashboard Architecture']
+    tags: ['SaaS Design', 'React/Next.js', 'Dashboard Architecture'],
+    linkId: 'web-app'
   },
   {
     id: '03',
     number: '003',
     title: 'Web Development',
     description: 'Robust front-end and back-end development. We write clean, semantic code optimized for speed and SEO.',
-    tags: ['Full Stack', 'CMS Integration', 'API Development']
+    tags: ['Full Stack', 'CMS Integration', 'API Development'],
+    linkId: 'web-dev'
   },
   {
     id: '04',
     number: '004',
     title: 'Digital Marketing',
     description: 'Data-driven strategies to amplify your brand presence. We help you reach your target audience through targeted campaigns.',
-    tags: ['SEO & SEM', 'Social Media', 'Content Strategy']
+    tags: ['SEO & SEM', 'Social Media', 'Content Strategy'],
+    linkId: 'digital-marketing'
   }
 ];
 
@@ -121,7 +125,7 @@ const Services: React.FC = () => {
                               <p className="text-gray-600 text-xl leading-relaxed mb-8 max-w-2xl">
                                 {service.description}
                               </p>
-                              <a href="#" className="inline-flex items-center gap-2 text-dosocket-700 text-sm font-bold uppercase tracking-widest group">
+                              <a href={`/services?id=${(service as any).linkId}`} className="inline-flex items-center gap-2 text-dosocket-700 text-sm font-bold uppercase tracking-widest group">
                                  <span className="border-b-2 border-dosocket-700/20 group-hover:border-dosocket-700 transition-all">See all details</span>
                                  <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                               </a>

@@ -89,23 +89,23 @@ const Footer: React.FC = () => {
            </h1>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-12 border-t border-white/10 pt-12">
-           <div className="md:col-span-2">
-              <div className="flex flex-col md:flex-row gap-8">
-                 <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center">
-                    info@Dosocket.com
-                 </a>
-                 <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center">
-                    +8801756-028551
-                 </a>
+        <div className="grid md:grid-cols-12 gap-12 border-t border-white/10 pt-12">
+           {/* Left Column: Logo, Subheading, Socials */}
+           <div className="md:col-span-5 flex flex-col gap-6">
+              <div>
+                 <h2 className="font-display font-bold text-3xl text-white mb-2">Dosocket</h2>
+                 <p className="text-dosocket-muted text-sm max-w-xs">
+                    Crafting digital experiences that inspire and innovate. Your partner in future-ready solutions.
+                 </p>
               </div>
-              <div className="mt-8 text-dosocket-muted text-xs">
-                 <p className="mb-1"><span className="text-white/40">Location:</span> Remote / Global</p>
-                 <p><span className="text-white/40">Availability:</span> 24/7 Support</p>
+              <div className="flex gap-4 mt-2">
+                 <SocialIcons />
               </div>
            </div>
 
-           <div>
+           {/* Middle Column: Links (Optional, keeping for structure) */}
+           <div className="md:col-span-3">
+              <h3 className="font-display font-bold text-lg text-white mb-6">Explore</h3>
               <ul className="space-y-4 text-sm text-dosocket-muted">
                  <li><button onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">Services</button></li>
                  <li><button onClick={() => document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-dosocket-accent transition-colors">Project</button></li>
@@ -114,8 +114,14 @@ const Footer: React.FC = () => {
               </ul>
            </div>
 
-           <div>
-              {/* Removed Blog and Workflow as requested */}
+           {/* Right Column: Contact Info */}
+           <div className="md:col-span-4 flex flex-col items-start md:items-end gap-6">
+              <a href="mailto:info@Dosocket.com" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center w-full md:w-auto">
+                 info@Dosocket.com
+              </a>
+              <a href="tel:+8801756028551" className="px-8 py-3 rounded-[0.8em] border border-dosocket-accent text-dosocket-accent text-sm hover:bg-dosocket-accent hover:text-dosocket-900 hover:border-dosocket-accent transition-all duration-300 hover:-translate-y-1 text-center w-full md:w-auto">
+                 +8801756-028551
+              </a>
            </div>
         </div>
 
@@ -123,9 +129,6 @@ const Footer: React.FC = () => {
            <div className="flex gap-8 text-xs text-white/40 mb-4 md:mb-0">
               <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
               <span>2026, Dosocket</span>
-           </div>
-           <div className="flex gap-4">
-              <SocialIcons />
            </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FancyButton from '../UI/FancyButton';
 import Button from '../UI/Button';
+import FloatingLines from '../UI/FloatingLines';
 
 const Hero: React.FC = () => {
   const words = ["Global Brands", "Innovators", "Visionaries", "Market Leaders"];
@@ -47,6 +48,15 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-dosocket-900">
+      
+      {/* Background with Fluid Liquid Ether Effect */}
+      <div className="absolute inset-0 w-full h-full">
+         <FloatingLines 
+            linesGradient={['#00FFFF', '#00FF7F', '#FFD700', '#FF4D6D', '#00FFFF']} 
+            animationSpeed={0.5}
+            interactive={true}
+         />
+      </div>
       
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-dosocket-900/80 z-10 pointer-events-none"></div>

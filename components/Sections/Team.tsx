@@ -74,6 +74,20 @@ const teamMembers: TeamMember[] = [
     socials: {
       linkedin: '#'
     }
+  },
+  {
+    id: '5',
+    name: 'Sameer',
+    role: 'Video Editing & Sales Senior',
+    country: 'Pakistan',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop',
+    experience: '3 Years Exp.',
+    specialty: 'Video Production',
+    bio: 'Sameer brings stories to life through compelling video editing and drives growth with his sales expertise.',
+    socials: {
+      linkedin: '#',
+      instagram: '#'
+    }
   }
 ];
 
@@ -95,7 +109,7 @@ const Team: React.FC = () => {
            </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        <div className="flex flex-wrap justify-center gap-8">
           {teamMembers.map((member) => (
             <div key={member.id} className="flex justify-center">
                <div className="team-card-parent">
